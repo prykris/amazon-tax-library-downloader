@@ -1,0 +1,22 @@
+# Icon files (users need to create their own)
+icon16.png
+icon48.png
+icon128.png
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Test files
+test/
+*.test.js

@@ -1,0 +1,46 @@
+{
+    "manifest_version": 3,
+    "name": "Amazon Seller Fee Invoice Downloader",
+    "version": "1.0.0",
+    "description": "Bulk download and filter Amazon Seller Fee Invoices with ease",
+    "permissions": [
+        "storage",
+        "downloads",
+        "tabs"
+    ],
+    "host_permissions": [
+        "https://sellercentral.amazon.co.uk/*",
+        "https://sellercentral.amazon.com/*",
+        "https://sellercentral-europe.amazon.com/*",
+        "https://sellercentral.amazon.de/*",
+        "https://sellercentral.amazon.fr/*",
+        "https://sellercentral.amazon.it/*",
+        "https://sellercentral.amazon.es/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://sellercentral.amazon.co.uk/tax/seller-fee-invoices*",
+                "https://sellercentral.amazon.com/tax/seller-fee-invoices*",
+                "https://sellercentral-europe.amazon.com/tax/seller-fee-invoices*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "css": [
+                "styles.css"
+            ],
+            "run_at": "document_idle"
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "icons": {
+        "16": "logo-16.png",
+        "32": "logo-32.png",
+        "34": "logo-34.png",
+        "48": "logo-48.png",
+        "128": "logo-128.png"
+    }
+}
